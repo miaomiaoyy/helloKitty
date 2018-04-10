@@ -3,6 +3,7 @@ import {Website} from '../../../models/website.model.client';
 import {WebsiteService} from '../../../services/website.service.client';
 import {ActivatedRoute, Router} from '@angular/router';
 import {NgForm} from '@angular/forms';
+import {SharedService} from '../../../services/shared.service';
 
 
 @Component({
@@ -21,7 +22,7 @@ export class WebsiteNewComponent implements OnInit {
 
   constructor(private websiteService: WebsiteService,
               private activatedRoute: ActivatedRoute,
-              private router: Router) { }
+              private router: Router, private sharedService: SharedService) { }
 
   createWebsite() {
     this.name = this.websiteForm.value.name;
@@ -38,7 +39,7 @@ export class WebsiteNewComponent implements OnInit {
     ngOnInit() {
       this.activatedRoute.params.subscribe(
         (params: any) => {
-          this.userId = params['uid'];
+          this.userId = this.sharedService.user._id;
         }
       );
 

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
+import {SharedService} from '../../../services/shared.service';
 
 @Component({
   selector: 'app-widget-new',
@@ -10,11 +11,11 @@ export class WidgetNewComponent implements OnInit {
   userId: String;
   widgetType: String;
 
-  constructor(private activatedRoute: ActivatedRoute) { }
+  constructor(private activatedRoute: ActivatedRoute, private sharedService: SharedService) { }
 
   ngOnInit() {
     this.activatedRoute.params.subscribe((params: any) => {
-      this.userId = params['uid'];
+      this.userId = this.sharedService.user._id;
       this.widgetType = params['wgtype'];
     });
   }

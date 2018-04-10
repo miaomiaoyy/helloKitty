@@ -4,6 +4,7 @@ import {WidgetService} from '../../../../services/widget.service.client';
 import {NgForm} from '@angular/forms';
 import {ActivatedRoute, Router} from '@angular/router';
 import {environment} from '../../../../../environments/environment';
+import {SharedService} from '../../../../services/shared.service';
 
 @Component({
   selector: 'app-widget-image-new',
@@ -27,7 +28,7 @@ export class WidgetImageNewComponent implements OnInit {
 
   constructor(private widgetService: WidgetService,
               private activatedRoute: ActivatedRoute,
-              private router: Router) { }
+              private router: Router, private sharedService: SharedService) { }
 
   createWidget() {
     this.text = this.widgetForm.value.text;
@@ -46,7 +47,7 @@ export class WidgetImageNewComponent implements OnInit {
   ngOnInit() {
     this.baseUrl = environment.baseUrl;
     this.activatedRoute.params.subscribe((params: any) => {
-      this.userId = params['uid'];
+      this.userId = this.sharedService.user._id;
       this.websiteId = params['wid'];
       this.pageId = params['pid'];
       this.pageId = params['pid'];

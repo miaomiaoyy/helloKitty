@@ -11,16 +11,23 @@
 
   <form (ngSubmit) = "login()" #f="ngForm">
     <label>Username</label>
-    <input   placeholder="username" name="username" type="text" class="form-control" ngModel required #username="ngModel"/>
+    <input   placeholder="username" name="username" type="text"
+             class="form-control" ngModel required #username="ngModel"
+              autocorrect="off" autocapitalize="none"/>
 
     <label>Password</label>
-    <input   placeholder="password" name="password" type="password" class="form-control" ngModel required #password="ngModel"/>
+    <input   placeholder="password" name="password" type="password" class="form-control"
+             ngModel required #password="ngModel"
+              autocorrect="off" autocapitalize="none"/>
 
     <span class="help-block" *ngIf="!username.valid && username.touched">
           Please enter username!
     </span>
     <button class="btn btn-primary btn-block" type="submit" [disabled]="!f.valid">Login</button>
     <a class="btn btn-success btn-block" routerLink="/register" role="button">Register</a>
-
+    <a href="http://localhost:3100/facebook/login" class="btn btn-primary btn-block">
+      <span class="fa fa-facebook"></span>
+      Facebook
+    </a>
   </form>
 </div>

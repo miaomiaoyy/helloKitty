@@ -38,6 +38,8 @@ import { WidgetHtmlComponent } from './views/widget/widget-edit/widget-html/widg
 import { WidgetTextComponent } from './views/widget/widget-edit/widget-text/widget-text.component';
 import { FlickrImageSearchComponent } from './views/widget/widget-edit/widget-image/flickr-image-search/flickr-image-search.component';
 import {FlickrService} from './services/flickr.service.client';
+import {SharedService} from './services/shared.service';
+import {AuthGuard} from './services/auth-guard.service';
 
 
 
@@ -78,7 +80,7 @@ import {FlickrService} from './services/flickr.service.client';
     HttpClientModule,
     QuillEditorModule
   ],
-  providers: [UserService, PageService, WebsiteService, WidgetService, FlickrService],
+  providers: [UserService, PageService, WebsiteService, WidgetService, FlickrService, SharedService, AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
