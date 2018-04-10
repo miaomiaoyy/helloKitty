@@ -8,7 +8,7 @@ module.exports = function (app) {
   var bcrypt           = require("bcrypt-nodejs");
   var AppId = '165803390787476';
   var SECRET = '94eda8464172ea3417b1921bb1d920b3';
-  var baseUrl=   'https://hellokittyy.herokuapp.com/';
+  var baseUrl=   'https://hellokittyy.herokuapp.com';
   var facebookCallbackUrl = baseUrl + '/auth/facebook/callback';
 
   const facebookConfig = {
