@@ -35,7 +35,7 @@ export class RegisterComponent implements OnInit {
     this.firstName = this.registerForm.value.firstName;
     this.lastName = this.registerForm.value.lastName;
     this.email = this.registerForm.value.email;
-    if (this.password.length < 8) {
+    if (this.password.length < 6) {
       this.passwordErrorFlag = true;
     } else if (this.password !== this.verifyPassword) {
       this.passwordMatchFlag = true;

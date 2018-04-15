@@ -8,7 +8,8 @@ module.exports = function (app) {
   var bcrypt           = require("bcrypt-nodejs");
   var AppId = '165803390787476';
   var SECRET = '94eda8464172ea3417b1921bb1d920b3';
-  var baseUrl=   'https://hellokittyy.herokuapp.com';
+  var baseUrl= 'https://hellokittyy.herokuapp.com';
+ //  var baseUrl= "http://localhost:3100";
   var facebookCallbackUrl = baseUrl + '/auth/facebook/callback';
 
   const facebookConfig = {
@@ -256,6 +257,7 @@ module.exports = function (app) {
   }
 
   function deleteUser(req, res) {
+
     var userId = req.params['userId'];
     // for (var i = 0; i < users.length; i++) {
     //   if (users[i]._id === userId) {

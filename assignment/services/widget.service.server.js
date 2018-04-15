@@ -146,8 +146,8 @@ module.exports = function (app) {
     var myFile = req.file;
 
     if (myFile == null) {
-      // return "http://localhost:4200/profile/" + userId + "/website/" + websiteId + "/page/" + pageId + "/widget/" + widgetId;
-      return "https://hellokittyy.herokuapp.com//profile/" + userId + "/website/" + websiteId + "/page/" + pageId + "/widget/" + widgetId;
+      //return "http://localhost:4200/profile/" + userId + "/website/" + websiteId + "/page/" + pageId + "/widget/" + widgetId;
+      return "https://hellokittyy.herokuapp.com/profile/" + userId + "/website/" + websiteId + "/page/" + pageId + "/widget/" + widgetId;
     }
 
     var userId = req.body.userId;
