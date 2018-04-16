@@ -12,17 +12,17 @@ module.exports = function (app) {
  //  var baseUrl= "http://localhost:3100";
   var facebookCallbackUrl = baseUrl + '/auth/facebook/callback';
 
-  // const facebookConfig = {
-  //   clientID: AppId,
-  //   clientSecret: SECRET,
-  //   callbackURL: facebookCallbackUrl
-  // }
   const facebookConfig = {
-    clientID: process.env.FB_CLIENT_ID_WAM,
-    clientSecret: process.env.FB_CLIENT_SECRET_WAM,
-    callbackURL: process.env.FB_CALL_BACK_URL_WAM
-
+    clientID: AppId,
+    clientSecret: SECRET,
+    callbackURL: facebookCallbackUrl
   }
+  // const facebookConfig = {
+  //   clientID: process.env.FB_CLIENT_ID_WAM,
+  //   clientSecret: process.env.FB_CLIENT_SECRET_WAM,
+  //   callbackURL: process.env.FB_CALL_BACK_URL_WAM
+  //
+  // }
 
 
   passport.serializeUser(serializeUser);
