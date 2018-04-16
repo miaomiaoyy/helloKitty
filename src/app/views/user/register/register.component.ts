@@ -48,20 +48,14 @@ export class RegisterComponent implements OnInit {
       //     this.router.navigate(['/profile', this.user._id]);
       //   }
       // );
-      this.userService.register(this.username, this.password)
-        .subscribe(
-          (data: any) => {
-            this.router.navigate(['/profile']);
-          },
-          (error: any) => {
-            this.error = error._body;
-          }
-        );
+      this.userService.register(this.username, this.password, this.firstName, this.lastName, this.email).subscribe(
+        (user: User) => {
+          this.user = user;
+          this.router.navigate(['/profile']);
+        },
+      );
     }
   }
 
-  ngOnInit() {
-
-  }
-
+  ngOnInit() {}
 }
