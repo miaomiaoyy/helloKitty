@@ -22,10 +22,9 @@ export class RegisterComponent implements OnInit {
   email: String;
   passwordErrorFlag: boolean;
   passwordMatchFlag: boolean;
-  passwordMatchMsg = 'password does not macth';
+  passwordMatchMsg = 'password does not match';
   passwordErrorMsg = 'password is too simple';
   user: User;
-  private error: any;
   constructor(private userService: UserService, private router: Router,
               private activatedRouter: ActivatedRoute) { }
   register() {
