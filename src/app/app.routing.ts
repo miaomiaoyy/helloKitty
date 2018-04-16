@@ -19,17 +19,17 @@ const appRoutes: Routes = [
   {path: 'login', component: LoginComponent},
   {path: 'register', component: RegisterComponent},
   {path: 'profile', component: ProfileComponent, canActivate: [AuthGuard]},
-  {path: 'profile/:uid/website', component: WebsiteListComponent},
-  {path: 'profile/:uid/website/new', component: WebsiteNewComponent},
-  {path: 'profile/:uid/website/:wid', component: WebsiteEditComponent},
-  {path: 'profile/:uid/website/:wid/page', component: PageListComponent},
-  {path: 'profile/:uid/website/:wid/page/new', component: PageNewComponent},
-  {path: 'profile/:uid/website/:wid/page/:pid', component: PageEditComponent},
-  {path: 'profile/:uid/website/:wid/page/:pid/widget', component: WidgetListComponent},
-  {path: 'profile/:uid/website/:wid/page/:pid/widget/new', component: WidgetChooserComponent},
-  {path: 'profile/:uid/website/:wid/page/:pid/widget/:wgid', component: WidgetEditComponent},
-  {path: 'profile/:uid/website/:wid/page/:pid/widget/new/:wgtype', component: WidgetNewComponent},
-  {path: 'profile/:uid/website/:wid/page/:pid/widget/:wgid/flickr', component: FlickrImageSearchComponent}
+  {path: 'profile/website', component: WebsiteListComponent},
+  {path: 'profile/website/new', component: WebsiteNewComponent},
+  {path: 'profile/website/:wid', component: WebsiteEditComponent},
+  {path: 'profile/website/:wid/page', component: PageListComponent},
+  {path: 'profile/website/:wid/page/new', component: PageNewComponent},
+  {path: 'profile/website/:wid/page/:pid', component: PageEditComponent},
+  {path: 'profile/website/:wid/page/:pid/widget', component: WidgetListComponent},
+  {path: 'profile/website/:wid/page/:pid/widget/new', component: WidgetChooserComponent},
+  {path: 'profile/website/:wid/page/:pid/widget/:wgid', component: WidgetEditComponent},
+  {path: 'profile/website/:wid/page/:pid/widget/new/:wgtype', component: WidgetNewComponent},
+  {path: 'profile/website/:wid/page/:pid/widget/:wgid/flickr', component: FlickrImageSearchComponent}
 ];
 
 export const routing = RouterModule.forRoot(appRoutes);
