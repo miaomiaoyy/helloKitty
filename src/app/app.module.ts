@@ -40,17 +40,8 @@ import { FlickrImageSearchComponent } from './views/widget/widget-edit/widget-im
 import { FlickrService } from './services/flickr.service.client';
 import { SharedService } from './services/shared.service';
 import { AuthGuard } from './services/auth-guard.service';
-import { ShoppingCartComponent } from './views/shopping-cart/shopping-cart.component';
 import { CookieService } from 'ngx-cookie-service';
-import { CakesComponent } from './views/cakes/cakes.component';
-import {CakeService} from './services/cake.service.client';
-import { MainPageComponent } from './views/main-page/main-page.component';
-import { CakeNewComponent } from './views/cakes/cake-new/cake-new.component';
-import { CakeListComponent } from './views/cake-list/cake-list.component';
-import {ShoppingCartService} from './services/shoppingcart.service.client';
-import { CakeCustomizationComponent } from './views/cakes/cake-customization/cake-customization.component';
-import { PaymentComponent } from './views/shopping-cart/payment/payment.component';
-import { PaypalComponent } from './views/shopping-cart/payment/paypal/paypal.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -79,14 +70,6 @@ import { PaypalComponent } from './views/shopping-cart/payment/paypal/paypal.com
     WidgetHtmlComponent,
     WidgetTextComponent,
     FlickrImageSearchComponent,
-    ShoppingCartComponent,
-    CakesComponent,
-    MainPageComponent,
-    CakeNewComponent,
-    CakeListComponent,
-    CakeCustomizationComponent,
-    PaymentComponent,
-    PaypalComponent,
 
   ],
   imports: [
@@ -98,8 +81,7 @@ import { PaypalComponent } from './views/shopping-cart/payment/paypal/paypal.com
     QuillEditorModule,
 
   ],
-  providers: [UserService, PageService, WebsiteService, WidgetService, FlickrService, SharedService, AuthGuard, CookieService,
-    CakeService, ShoppingCartService],
+  providers: [UserService, PageService, WebsiteService, WidgetService, FlickrService, SharedService, AuthGuard, CookieService],
   bootstrap: [AppComponent]
 })
 export class AppModule {

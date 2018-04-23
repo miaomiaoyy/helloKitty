@@ -13,34 +13,12 @@ import {WidgetChooserComponent} from './views/widget/widget-chooser/widget-choos
 import {WidgetEditComponent} from './views/widget/widget-edit/widget-edit.component';
 import {WidgetNewComponent} from './views/widget/widget-new/widget-new.component';
 import {FlickrImageSearchComponent} from './views/widget/widget-edit/widget-image/flickr-image-search/flickr-image-search.component';
-import {AuthGuard} from './services/auth-guard.service';
-import {CakesComponent} from './views/cakes/cakes.component';
-import {MainPageComponent} from './views/main-page/main-page.component';
-import {CakeNewComponent} from './views/cakes/cake-new/cake-new.component';
-import {CakeListComponent} from './views/cake-list/cake-list.component';
-import {ShoppingCartComponent} from './views/shopping-cart/shopping-cart.component';
-import {CakeCustomizationComponent} from './views/cakes/cake-customization/cake-customization.component';
-import {PaymentComponent} from './views/shopping-cart/payment/payment.component';
-import {PaypalComponent} from "./views/shopping-cart/payment/paypal/paypal.component";
 
 const appRoutes: Routes = [
   {path: '', redirectTo: 'main-page', pathMatch: 'full'},
   {path: 'login', component: LoginComponent},
   {path: 'register', component: RegisterComponent},
   {path: 'profile', component: ProfileComponent},
-  {path: 'cakes', component: CakesComponent},
-  {path: 'cakes/new', component: CakeNewComponent},
-  {path: 'main-page', component: MainPageComponent},
-  {path: 'cakes/top10', component: CakeListComponent},
-  {path: ':uid/cakes', component: CakeListComponent},
-  {path: 'cakes/cake-customization', component: CakeCustomizationComponent},
-  {path: 'cakes/shoppingcart', component: ShoppingCartComponent},
-  {path: 'shoppingcart/:uid/payment', component: PaymentComponent},
-  {path: 'shoppingcart/:uid/paypal', component: PaypalComponent},
-
-  {path: ':shoppingcart/:uid', component: ShoppingCartComponent},
-  {path: ':uid/shoppingcart/add', component:ShoppingCartComponent},
-
   {path: 'profile/:uid/website', component: WebsiteListComponent},
   {path: 'profile/:uid/website/new', component: WebsiteNewComponent},
   {path: 'profile/:uid/website/:wid', component: WebsiteEditComponent},
